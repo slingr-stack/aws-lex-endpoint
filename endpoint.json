@@ -1,0 +1,64 @@
+{
+    "label": "AWS Lex",
+    "name": "aws-lex",
+    "apiVersion": "v1",
+    "internal": false,
+    "configurationType": "GLOBAL",
+    "deployment": {
+        "profiles":[
+            {
+                "name": "default",
+                "label": "Default",
+                "memory": 256,
+                "description": "Default configuration"
+            }
+        ],
+        "allowMultipleInstances": true
+    },
+    "icon48": "https://storage.googleapis.com/static.slingrs.io/platform/endpoints/aws-lex.png",
+    "status": "ACTIVE",
+    "stores": [],
+    "events": [],
+    "functions": [
+        {
+            "label": "HTTP GET",
+            "name": "_httpGet"
+        },
+        {
+            "label": "HTTP DELETE",
+            "name": "_httpDelete"
+        },
+        {
+            "label": "HTTP POST",
+            "name": "_httpPost"
+        },
+        {
+            "label": "HTTP PUT",
+            "name": "_httpPut"
+        }
+    ],
+    "scripts":[
+        "functions.js",
+        "lex-helpers.js"
+    ],
+    "configuration":[
+        {
+            "name": "accessKey",
+            "label": "AWS Access Key",
+            "type": "text",
+            "required": true
+        },
+        {
+            "name": "secretAccessKey",
+            "label": "AWS Secret Access Key",
+            "type": "password",
+            "required": true
+        },
+        {
+            "name": "region",
+            "label": "AWS Region",
+            "type": "text",
+            "required": true
+        }
+    ]
+}

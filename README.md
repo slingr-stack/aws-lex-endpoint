@@ -130,24 +130,23 @@ SLINGR is a low-code rapid application development platform that accelerates dev
 
 This endpoint is licensed under the Apache License 2.0. See the `LICENSE` file for more details.
 
-
 # Javascript API
 
-The Javascript API of the aws-lex endpoint has three pieces:
+The Javascript API of the awsLex endpoint has three pieces:
 
 - **HTTP requests**: These allow to make regular HTTP requests.
 - **Shortcuts**: These are helpers to make HTTP request to the API in a more convenient way.
 - **Additional Helpers**: These helpers provide additional features that facilitate or improves the endpoint usage in SLINGR.
 
 ## HTTP requests
-You can make `POST`,`DELETE`,`GET`,`PUT` requests to the [aws-lex API](API_URL_HERE) like this:
+You can make `POST`,`DELETE`,`GET`,`PUT` requests to the [awsLex API](API_URL_HERE) like this:
 ```javascript
-var response = app.endpoints.aws-lex.post('/bot/:botName/alias/:botAlias/user/:userId/text', body)
-var response = app.endpoints.aws-lex.post('/bot/:botName/alias/:botAlias/user/:userId/text')
-var response = app.endpoints.aws-lex.delete('/slottypes/:name')
-var response = app.endpoints.aws-lex.get('/bots/:name/versions')
-var response = app.endpoints.aws-lex.put('/slottypes/:name/versions/$LATEST', body)
-var response = app.endpoints.aws-lex.put('/slottypes/:name/versions/$LATEST')
+var response = app.endpoints.awsLex.post('/imports', body)
+var response = app.endpoints.awsLex.post('/imports')
+var response = app.endpoints.awsLex.delete('/intents/:name')
+var response = app.endpoints.awsLex.get('/slottypes')
+var response = app.endpoints.awsLex.put('/bots/:name/versions/$LATEST', body)
+var response = app.endpoints.awsLex.put('/bots/:name/versions/$LATEST')
 ```
 
 Please take a look at the documentation of the [HTTP endpoint](https://github.com/slingr-stack/http-endpoint#javascript-api)
@@ -164,229 +163,229 @@ Instead of having to use the generic HTTP methods, you can (and should) make use
 * API URL: '/bots/:name/versions'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.aws-lex.bots.versions.post(name, body)
+app.endpoints.awsLex.bots.versions.post(name, body)
 ```
 ---
 * API URL: '/intents/:name/versions'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.aws-lex.intents.versions.post(name, body)
+app.endpoints.awsLex.intents.versions.post(name, body)
 ```
 ---
 * API URL: '/slottypes/:name/versions'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.aws-lex.slottypes.versions.post(name, body)
+app.endpoints.awsLex.slottypes.versions.post(name, body)
 ```
 ---
 * API URL: '/imports'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.aws-lex.imports.post(body)
+app.endpoints.awsLex.imports.post(body)
 ```
 ---
 * API URL: '/bot/:botName/alias/:botAlias/user/:userId/content'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.aws-lex.bot.alias.user.content.post(botName, botAlias, userId, body)
+app.endpoints.awsLex.bot.alias.user.content.post(botName, botAlias, userId, body)
 ```
 ---
 * API URL: '/bot/:botName/alias/:botAlias/user/:userId/text'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.aws-lex.bot.alias.user.text.post(botName, botAlias, userId, body)
+app.endpoints.awsLex.bot.alias.user.text.post(botName, botAlias, userId, body)
 ```
 ---
 * API URL: '/bots/:name'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.aws-lex.bots.delete(name)
+app.endpoints.awsLex.bots.delete(name)
 ```
 ---
 * API URL: '/bots/:botName/aliases/:name'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.aws-lex.bots.aliases.delete(botName, name)
+app.endpoints.awsLex.bots.aliases.delete(botName, name)
 ```
 ---
 * API URL: '/bots/:botName/aliases/:aliasName/channels/:name'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.aws-lex.bots.aliases.channels.delete(botName, aliasName, name)
+app.endpoints.awsLex.bots.aliases.channels.delete(botName, aliasName, name)
 ```
 ---
 * API URL: '/bots/:name/versions/:version'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.aws-lex.bots.versions.delete(name, version)
+app.endpoints.awsLex.bots.versions.delete(name, version)
 ```
 ---
 * API URL: '/intents/:name'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.aws-lex.intents.delete(name)
+app.endpoints.awsLex.intents.delete(name)
 ```
 ---
 * API URL: '/intents/:name/versions/:version'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.aws-lex.intents.versions.delete(name, version)
+app.endpoints.awsLex.intents.versions.delete(name, version)
 ```
 ---
 * API URL: '/slottypes/:name'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.aws-lex.slottypes.delete(name)
+app.endpoints.awsLex.slottypes.delete(name)
 ```
 ---
 * API URL: '/slottypes/:name/version/:version'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.aws-lex.slottypes.version.delete(name, version)
+app.endpoints.awsLex.slottypes.version.delete(name, version)
 ```
 ---
 * API URL: '/bots/:botName/utterances/:userId'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.aws-lex.bots.utterances.delete(botName, userId)
+app.endpoints.awsLex.bots.utterances.delete(botName, userId)
 ```
 ---
 * API URL: '/bots/:name/versions/:versionoralias'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.aws-lex.bots.versions.get(name)
+app.endpoints.awsLex.bots.versions.get(name)
 ```
 ---
 * API URL: '/bots/:name/versions'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.aws-lex.bots.versions.get()
+app.endpoints.awsLex.bots.versions.get()
 ```
 ---
 * API URL: '/bots/:botName/aliases/:name'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.aws-lex.bots.aliases.get(botName)
+app.endpoints.awsLex.bots.aliases.get(botName)
 ```
 ---
 * API URL: '/bots/:botName/aliases'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.aws-lex.bots.aliases.get()
+app.endpoints.awsLex.bots.aliases.get()
 ```
 ---
 * API URL: '/bots/:botName/aliases/:aliasName/channels/:name'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.aws-lex.bots.aliases.channels.get(botName, aliasName)
+app.endpoints.awsLex.bots.aliases.channels.get(botName, aliasName)
 ```
 ---
 * API URL: '/bots/:botName/aliases/:aliasName/channels'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.aws-lex.bots.aliases.channels.get(botName)
+app.endpoints.awsLex.bots.aliases.channels.get(botName)
 ```
 ---
 * API URL: '/bots'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.aws-lex.bots.get()
+app.endpoints.awsLex.bots.get()
 ```
 ---
 * API URL: '/builtins/intents/:signature'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.aws-lex.builtins.intents.get()
+app.endpoints.awsLex.builtins.intents.get()
 ```
 ---
 * API URL: '/builtins/intents'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.aws-lex.builtins.intents.get()
+app.endpoints.awsLex.builtins.intents.get()
 ```
 ---
 * API URL: '/builtins/slottypes'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.aws-lex.builtins.slottypes.get()
+app.endpoints.awsLex.builtins.slottypes.get()
 ```
 ---
 * API URL: '/exports'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.aws-lex.exports.get()
+app.endpoints.awsLex.exports.get()
 ```
 ---
 * API URL: '/imports/:importId'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.aws-lex.imports.get(importId)
+app.endpoints.awsLex.imports.get(importId)
 ```
 ---
 * API URL: '/intents/:name/versions/:version'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.aws-lex.intents.versions.get(name)
+app.endpoints.awsLex.intents.versions.get(name)
 ```
 ---
 * API URL: '/intents/:name/versions'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.aws-lex.intents.versions.get()
+app.endpoints.awsLex.intents.versions.get()
 ```
 ---
 * API URL: '/intents'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.aws-lex.intents.get()
+app.endpoints.awsLex.intents.get()
 ```
 ---
 * API URL: '/slottypes/:name/versions/:version'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.aws-lex.slottypes.versions.get(name)
+app.endpoints.awsLex.slottypes.versions.get(name)
 ```
 ---
 * API URL: '/slottypes/:name/versions'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.aws-lex.slottypes.versions.get()
+app.endpoints.awsLex.slottypes.versions.get()
 ```
 ---
 * API URL: '/slottypes'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.aws-lex.slottypes.get()
+app.endpoints.awsLex.slottypes.get()
 ```
 ---
 * API URL: '/bots/:botname/utterances'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.aws-lex.bots.utterances.get(botname)
+app.endpoints.awsLex.bots.utterances.get(botname)
 ```
 ---
 * API URL: '/bots/:name/versions/$LATEST'
 * HTTP Method: 'PUT'
 ```javascript
-app.endpoints.aws-lex.bots.versions.$LATEST.put(name, body)
+app.endpoints.awsLex.bots.versions.$LATEST.put(name, body)
 ```
 ---
 * API URL: '/bots/:botName/aliases/:name'
 * HTTP Method: 'PUT'
 ```javascript
-app.endpoints.aws-lex.bots.aliases.put(botName, name, body)
+app.endpoints.awsLex.bots.aliases.put(botName, name, body)
 ```
 ---
 * API URL: '/intents/:name/versions/$LATEST'
 * HTTP Method: 'PUT'
 ```javascript
-app.endpoints.aws-lex.intents.versions.$LATEST.put(name, body)
+app.endpoints.awsLex.intents.versions.$LATEST.put(name, body)
 ```
 ---
 * API URL: '/slottypes/:name/versions/$LATEST'
 * HTTP Method: 'PUT'
 ```javascript
-app.endpoints.aws-lex.slottypes.versions.$LATEST.put(name, body)
+app.endpoints.awsLex.slottypes.versions.$LATEST.put(name, body)
 ```
 ---
 

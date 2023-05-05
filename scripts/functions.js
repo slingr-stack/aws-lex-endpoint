@@ -60,7 +60,7 @@ endpoint.bots.versions.post = function(name, httpOptions) {
         return;
     }
     var url = parse('/bots/:name/versions', [name]);
-    sys.logs.debug('[aws-lex] POST from: ' + url);
+    sys.logs.debug('[awsLex] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
@@ -71,7 +71,7 @@ endpoint.intents.versions.post = function(name, httpOptions) {
         return;
     }
     var url = parse('/intents/:name/versions', [name]);
-    sys.logs.debug('[aws-lex] POST from: ' + url);
+    sys.logs.debug('[awsLex] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
@@ -82,7 +82,7 @@ endpoint.slottypes.versions.post = function(name, httpOptions) {
         return;
     }
     var url = parse('/slottypes/:name/versions', [name]);
-    sys.logs.debug('[aws-lex] POST from: ' + url);
+    sys.logs.debug('[awsLex] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
@@ -93,7 +93,7 @@ endpoint.bots.delete = function(name, httpOptions) {
         return;
     }
     var url = parse('/bots/:name', [name]);
-    sys.logs.debug('[aws-lex] DELETE from: ' + url);
+    sys.logs.debug('[awsLex] DELETE from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._delete(options);
 };
@@ -104,7 +104,7 @@ endpoint.bots.aliases.delete = function(botName, name, httpOptions) {
         return;
     }
     var url = parse('/bots/:botName/aliases/:name', [botName, name]);
-    sys.logs.debug('[aws-lex] DELETE from: ' + url);
+    sys.logs.debug('[awsLex] DELETE from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._delete(options);
 };
@@ -115,7 +115,7 @@ endpoint.bots.aliases.channels.delete = function(botName, aliasName, name, httpO
         return;
     }
     var url = parse('/bots/:botName/aliases/:aliasName/channels/:name', [botName, aliasName, name]);
-    sys.logs.debug('[aws-lex] DELETE from: ' + url);
+    sys.logs.debug('[awsLex] DELETE from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._delete(options);
 };
@@ -126,7 +126,7 @@ endpoint.bots.versions.delete = function(name, version, httpOptions) {
         return;
     }
     var url = parse('/bots/:name/versions/:version', [name, version]);
-    sys.logs.debug('[aws-lex] DELETE from: ' + url);
+    sys.logs.debug('[awsLex] DELETE from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._delete(options);
 };
@@ -137,7 +137,7 @@ endpoint.intents.delete = function(name, httpOptions) {
         return;
     }
     var url = parse('/intents/:name', [name]);
-    sys.logs.debug('[aws-lex] DELETE from: ' + url);
+    sys.logs.debug('[awsLex] DELETE from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._delete(options);
 };
@@ -148,7 +148,7 @@ endpoint.intents.versions.delete = function(name, version, httpOptions) {
         return;
     }
     var url = parse('/intents/:name/versions/:version', [name, version]);
-    sys.logs.debug('[aws-lex] DELETE from: ' + url);
+    sys.logs.debug('[awsLex] DELETE from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._delete(options);
 };
@@ -159,7 +159,7 @@ endpoint.slottypes.delete = function(name, httpOptions) {
         return;
     }
     var url = parse('/slottypes/:name', [name]);
-    sys.logs.debug('[aws-lex] DELETE from: ' + url);
+    sys.logs.debug('[awsLex] DELETE from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._delete(options);
 };
@@ -170,7 +170,7 @@ endpoint.slottypes.version.delete = function(name, version, httpOptions) {
         return;
     }
     var url = parse('/slottypes/:name/version/:version', [name, version]);
-    sys.logs.debug('[aws-lex] DELETE from: ' + url);
+    sys.logs.debug('[awsLex] DELETE from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._delete(options);
 };
@@ -181,7 +181,7 @@ endpoint.bots.utterances.delete = function(botName, userId, httpOptions) {
         return;
     }
     var url = parse('/bots/:botName/utterances/:userId', [botName, userId]);
-    sys.logs.debug('[aws-lex] DELETE from: ' + url);
+    sys.logs.debug('[awsLex] DELETE from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._delete(options);
 };
@@ -207,7 +207,7 @@ endpoint.bots.versions.get = function(name, versionoralias, httpOptions) {
             sys.logs.error('Invalid argument received.');
             return;
     }
-    sys.logs.debug('[aws-lex] GET from: ' + url);
+    sys.logs.debug('[awsLex] GET from: ' + url);
 	var options = checkHttpOptions(url, httpOptions);
 	return endpoint._get(options);
 };
@@ -233,7 +233,7 @@ endpoint.bots.aliases.get = function(botName, name, httpOptions) {
             sys.logs.error('Invalid argument received.');
             return;
     }
-    sys.logs.debug('[aws-lex] GET from: ' + url);
+    sys.logs.debug('[awsLex] GET from: ' + url);
 	var options = checkHttpOptions(url, httpOptions);
 	return endpoint._get(options);
 };
@@ -259,14 +259,14 @@ endpoint.bots.aliases.channels.get = function(botName, aliasName, name, httpOpti
             sys.logs.error('Invalid argument received.');
             return;
     }
-    sys.logs.debug('[aws-lex] GET from: ' + url);
+    sys.logs.debug('[awsLex] GET from: ' + url);
 	var options = checkHttpOptions(url, httpOptions);
 	return endpoint._get(options);
 };
 
 endpoint.bots.get = function(httpOptions) {
     var url = parse('/bots');
-    sys.logs.debug('[aws-lex] GET from: ' + url);
+    sys.logs.debug('[awsLex] GET from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._get(options);
 };
@@ -292,21 +292,21 @@ endpoint.builtins.intents.get = function(signature, httpOptions) {
             sys.logs.error('Invalid argument received.');
             return;
     }
-    sys.logs.debug('[aws-lex] GET from: ' + url);
+    sys.logs.debug('[awsLex] GET from: ' + url);
 	var options = checkHttpOptions(url, httpOptions);
 	return endpoint._get(options);
 };
 
 endpoint.builtins.slottypes.get = function(httpOptions) {
     var url = parse('/builtins/slottypes');
-    sys.logs.debug('[aws-lex] GET from: ' + url);
+    sys.logs.debug('[awsLex] GET from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._get(options);
 };
 
 endpoint.exports.get = function(httpOptions) {
     var url = parse('/exports');
-    sys.logs.debug('[aws-lex] GET from: ' + url);
+    sys.logs.debug('[awsLex] GET from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._get(options);
 };
@@ -317,7 +317,7 @@ endpoint.imports.get = function(importId, httpOptions) {
         return;
     }
     var url = parse('/imports/:importId', [importId]);
-    sys.logs.debug('[aws-lex] GET from: ' + url);
+    sys.logs.debug('[awsLex] GET from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._get(options);
 };
@@ -343,14 +343,14 @@ endpoint.intents.versions.get = function(name, version, httpOptions) {
             sys.logs.error('Invalid argument received.');
             return;
     }
-    sys.logs.debug('[aws-lex] GET from: ' + url);
+    sys.logs.debug('[awsLex] GET from: ' + url);
 	var options = checkHttpOptions(url, httpOptions);
 	return endpoint._get(options);
 };
 
 endpoint.intents.get = function(httpOptions) {
     var url = parse('/intents');
-    sys.logs.debug('[aws-lex] GET from: ' + url);
+    sys.logs.debug('[awsLex] GET from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._get(options);
 };
@@ -376,14 +376,14 @@ endpoint.slottypes.versions.get = function(name, version, httpOptions) {
             sys.logs.error('Invalid argument received.');
             return;
     }
-    sys.logs.debug('[aws-lex] GET from: ' + url);
+    sys.logs.debug('[awsLex] GET from: ' + url);
 	var options = checkHttpOptions(url, httpOptions);
 	return endpoint._get(options);
 };
 
 endpoint.slottypes.get = function(httpOptions) {
     var url = parse('/slottypes');
-    sys.logs.debug('[aws-lex] GET from: ' + url);
+    sys.logs.debug('[awsLex] GET from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._get(options);
 };
@@ -394,7 +394,7 @@ endpoint.bots.utterances.get = function(botname, httpOptions) {
         return;
     }
     var url = parse('/bots/:botname/utterances', [botname]);
-    sys.logs.debug('[aws-lex] GET from: ' + url);
+    sys.logs.debug('[awsLex] GET from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._get(options);
 };
@@ -405,7 +405,7 @@ endpoint.bots.versions.$LATEST.put = function(name, httpOptions) {
         return;
     }
     var url = parse('/bots/:name/versions/$LATEST', [name]);
-    sys.logs.debug('[aws-lex] PUT from: ' + url);
+    sys.logs.debug('[awsLex] PUT from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._put(options);
 };
@@ -416,7 +416,7 @@ endpoint.bots.aliases.put = function(botName, name, httpOptions) {
         return;
     }
     var url = parse('/bots/:botName/aliases/:name', [botName, name]);
-    sys.logs.debug('[aws-lex] PUT from: ' + url);
+    sys.logs.debug('[awsLex] PUT from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._put(options);
 };
@@ -427,7 +427,7 @@ endpoint.intents.versions.$LATEST.put = function(name, httpOptions) {
         return;
     }
     var url = parse('/intents/:name/versions/$LATEST', [name]);
-    sys.logs.debug('[aws-lex] PUT from: ' + url);
+    sys.logs.debug('[awsLex] PUT from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._put(options);
 };
@@ -438,14 +438,14 @@ endpoint.slottypes.versions.$LATEST.put = function(name, httpOptions) {
         return;
     }
     var url = parse('/slottypes/:name/versions/$LATEST', [name]);
-    sys.logs.debug('[aws-lex] PUT from: ' + url);
+    sys.logs.debug('[awsLex] PUT from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._put(options);
 };
 
 endpoint.imports.post = function(httpOptions) {
     var url = parse('/imports');
-    sys.logs.debug('[aws-lex] POST from: ' + url);
+    sys.logs.debug('[awsLex] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
@@ -456,7 +456,7 @@ endpoint.bot.alias.user.content.post = function(botName, botAlias, userId, httpO
         return;
     }
     var url = parse('/bot/:botName/alias/:botAlias/user/:userId/content', [botName, botAlias, userId]);
-    sys.logs.debug('[aws-lex] POST from: ' + url);
+    sys.logs.debug('[awsLex] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };
@@ -467,7 +467,7 @@ endpoint.bot.alias.user.text.post = function(botName, botAlias, userId, httpOpti
         return;
     }
     var url = parse('/bot/:botName/alias/:botAlias/user/:userId/text', [botName, botAlias, userId]);
-    sys.logs.debug('[aws-lex] POST from: ' + url);
+    sys.logs.debug('[awsLex] POST from: ' + url);
     var options = checkHttpOptions(url, httpOptions);
     return endpoint._post(options);
 };

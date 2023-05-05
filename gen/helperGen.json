@@ -1,6 +1,6 @@
 {
   "fileName": "functions",
-  "endpointName": "aws-lex",
+  "endpointName": "awsLex",
   "apiDescriptors": [
     {
       "method": "POST",
@@ -90,7 +90,7 @@
       "method": "GET",
       "prefix": "",
       "suffix": "",
-      "url": "/bots/:botName/aliases/"
+      "url": "/bots/:botName/aliases"
     },
     {
       "method": "GET",
@@ -102,19 +102,19 @@
       "method": "GET",
       "prefix": "",
       "suffix": "",
-      "url": "/bots/:botName/aliases/:aliasName/channels/"
+      "url": "/bots/:botName/aliases/:aliasName/channels"
     },
     {
       "method": "GET",
       "prefix": "",
       "suffix": "",
-      "url": "/bots/"
+      "url": "/bots"
     },
     {
       "method": "GET",
       "prefix": "",
       "suffix": "",
-      "url": "/bots/:name/versions/"
+      "url": "/bots/:name/versions"
     },
     {
       "method": "GET",
@@ -126,19 +126,19 @@
       "method": "GET",
       "prefix": "",
       "suffix": "",
-      "url": "/builtins/intents/"
+      "url": "/builtins/intents"
     },
     {
       "method": "GET",
       "prefix": "",
       "suffix": "",
-      "url": "/builtins/slottypes/"
+      "url": "/builtins/slottypes"
     },
     {
       "method": "GET",
       "prefix": "",
       "suffix": "",
-      "url": "/exports/"
+      "url": "/exports"
     },
     {
       "method": "GET",
@@ -156,13 +156,13 @@
       "method": "GET",
       "prefix": "",
       "suffix": "",
-      "url": "/intents/"
+      "url": "/intents"
     },
     {
       "method": "GET",
       "prefix": "",
       "suffix": "",
-      "url": "/intents/:name/versions/"
+      "url": "/intents/:name/versions"
     },
     {
       "method": "GET",
@@ -174,13 +174,13 @@
       "method": "GET",
       "prefix": "",
       "suffix": "",
-      "url": "/slottypes/"
+      "url": "/slottypes"
     },
     {
       "method": "GET",
       "prefix": "",
       "suffix": "",
-      "url": "/slottypes/:name/versions/"
+      "url": "/slottypes/:name/versions"
     },
     {
       "method": "GET",
@@ -216,7 +216,7 @@
       "method": "POST",
       "prefix": "",
       "suffix": "",
-      "url": "/imports/"
+      "url": "/imports"
     },
     {
       "method": "POST",

@@ -1,0 +1,266 @@
+{
+  "label": "API call to aws-lex",
+  "name": "apiCallAwsLex",
+  "category": "integrations",
+  "description": "This flow step will send generic request to aws-lex",
+  "inputs": [
+    {
+      "label": "Url",
+      "name": "url",
+      "description": "The method and path to which this endpoint is to send requests in a generic way.",
+      "type": "urlParams",
+      "required": "true",
+      "options": {
+        "type": "dropDown",
+        "possibleValues": [
+            {
+              "label": "POST /bots/{name}/versions"
+            },
+            {
+              "label": "POST /intents/{name}/versions"
+            },
+            {
+              "label": "POST /slottypes/{name}/versions"
+            },
+            {
+              "label": "POST /imports"
+            },
+            {
+              "label": "POST /bot/{botName}/alias/{botAlias}/user/{userId}/content"
+            },
+            {
+              "label": "POST /bot/{botName}/alias/{botAlias}/user/{userId}/text"
+            },
+            {
+              "label": "DELETE /bots/{name}"
+            },
+            {
+              "label": "DELETE /bots/{botName}/aliases/{name}"
+            },
+            {
+              "label": "DELETE /bots/{botName}/aliases/{aliasName}/channels/{name}"
+            },
+            {
+              "label": "DELETE /bots/{name}/versions/{version}"
+            },
+            {
+              "label": "DELETE /intents/{name}"
+            },
+            {
+              "label": "DELETE /intents/{name}/versions/{version}"
+            },
+            {
+              "label": "DELETE /slottypes/{name}"
+            },
+            {
+              "label": "DELETE /slottypes/{name}/version/{version}"
+            },
+            {
+              "label": "DELETE /bots/{botName}/utterances/{userId}"
+            },
+            {
+              "label": "GET /bots/{name}/versions/{versionoralias}"
+            },
+            {
+              "label": "GET /bots/{name}/versions"
+            },
+            {
+              "label": "GET /bots/{botName}/aliases/{name}"
+            },
+            {
+              "label": "GET /bots/{botName}/aliases"
+            },
+            {
+              "label": "GET /bots/{botName}/aliases/{aliasName}/channels/{name}"
+            },
+            {
+              "label": "GET /bots/{botName}/aliases/{aliasName}/channels"
+            },
+            {
+              "label": "GET /bots"
+            },
+            {
+              "label": "GET /builtins/intents/{signature}"
+            },
+            {
+              "label": "GET /builtins/intents"
+            },
+            {
+              "label": "GET /builtins/slottypes"
+            },
+            {
+              "label": "GET /exports"
+            },
+            {
+              "label": "GET /imports/{importId}"
+            },
+            {
+              "label": "GET /intents/{name}/versions/{version}"
+            },
+            {
+              "label": "GET /intents/{name}/versions"
+            },
+            {
+              "label": "GET /intents"
+            },
+            {
+              "label": "GET /slottypes/{name}/versions/{version}"
+            },
+            {
+              "label": "GET /slottypes/{name}/versions"
+            },
+            {
+              "label": "GET /slottypes"
+            },
+            {
+              "label": "GET /bots/{botname}/utterances"
+            },
+            {
+              "label": "PUT /bots/{name}/versions/$LATEST"
+            },
+            {
+              "label": "PUT /bots/{botName}/aliases/{name}"
+            },
+            {
+              "label": "PUT /intents/{name}/versions/$LATEST"
+            },
+            {
+              "label": "PUT /slottypes/{name}/versions/$LATEST"
+            }
+        ]
+      }
+    },
+    {
+      "label": "Headers",
+      "name": "headers",
+      "description": "Let the client and the server pass additional information with the HTTP request in a key value format. (e.g. key=ABC123)",
+      "type": "keyValue"
+    },
+    {
+      "label": "Query Params",
+      "name": "params",
+      "description": "Parameters attached to the end of a url in a key value format. (e.g. key=ABC123)",
+      "type": "keyValue"
+    },
+    {
+      "label": "Body",
+      "name": "body",
+      "type": "json",
+      "description": "Content to be sent to the server.",
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Event",
+      "name": "events",
+      "type": "dropDown",
+      "description": "Select event",
+      "multiplicity": "one",
+      "options": {
+        "possibleValues": [
+          {
+            "label": "File Downloaded",
+            "name": "fileDownloaded"
+          }
+        ],
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Override Settings",
+      "name": "overrideSettings",
+      "type": "boolean",
+      "description": "If true, allows adding configurations",
+      "defaultValue": false,
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Follow Redirects",
+      "name": "followRedirects",
+      "type": "boolean",
+      "description": "Follow the redirects when a HTTP request is executed",
+      "visibility": "config.overrideSettings",
+      "defaultValue": false,
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Download",
+      "name": "download",
+      "type": "boolean",
+      "description": "Indicates that the resource has to be downloaded into a file instead of returning it in the response.",
+      "visibility": "config.overrideSettings && config.events != \"fileDownloaded\"",
+      "defaultValue": false,
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "File Name",
+      "name": "fileName",
+      "description": "If provided, the file will be stored with this name. If empty the file name will be calculated from the URL.",
+      "visibility": "(config.overrideSettings && config.download) || config.events === \"fileDownloaded\"",
+      "type": "text",
+      "options": {
+        "allowContextSelector": "true"
+      }
+    },
+    {
+      "label": "Full Response",
+      "name": "fullResponse",
+      "type": "boolean",
+      "description": "Include extended information about response",
+      "visibility": "config.overrideSettings",
+      "defaultValue": false,
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Connection timeout",
+      "name": "connectionTimeout",
+      "description": "Connect timeout interval, in milliseconds (0 = infinity). Default value: 5000 ms (5 sec)",
+      "visibility": "config.overrideSettings",
+      "type": "text",
+      "defaultValue": "5000",
+      "typeOptions": {
+        "validation": {
+          "function": "!config.connectionTimeout || utils.isPlaceholder(config.connectionTimeout) || utils.getInteger(config.connectionTimeout) >= 0",
+          "message": "The time must be a valid placeholder or a positive integer greater than or equal to 0. "
+        }
+      },
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Read timeout",
+      "name": "readTimeout",
+      "description": "Read timeout interval, in milliseconds (0 = infinity). Default value: 60000 ms (60 sec)",
+      "visibility": "config.overrideSettings",
+      "type": "text",
+      "defaultValue": "60000",
+      "typeOptions": {
+        "validation": {
+          "function": "!config.readTimeout || utils.isPlaceholder(config.readTimeout) || utils.getInteger(config.readTimeout) >= 0",
+          "message": "The time must be a valid placeholder or a positive integer greater than or equal to 0. "
+        }
+      },
+      "options": {
+        "allowContextSelector": "false"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": "Response",
+      "name": "response",
+      "type": "object",
+      "description": "The response to external URL"
+    }
+  ]
+}

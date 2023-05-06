@@ -1,0 +1,36 @@
+{
+  "label": "Get Bot Version",
+  "name": "getBotVersionAwsLex",
+  "category": "integrations",
+  "description": "Returns metadata information for a specific bot. You must provide the bot name and the bot version or alias.",
+  "inputs": [
+    {
+      "label": "Bot Name",
+      "name": "botName",
+      "description": "The name of the bot. The name is case sensitive.",
+      "type": "text",
+      "required": "true",
+      "options": {
+        "allowContextSelector": "true"
+      }
+    },
+    {
+      "label": "versionoralias",
+      "name": "Version or alias",
+      "description": "The version or alias of the bot.",
+      "type": "text",
+      "required": "true",
+      "options": {
+        "allowContextSelector": "true"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": "Response",
+      "name": "response",
+      "type": "object",
+      "description": "The response to external URL"
+    }
+  ]
+}

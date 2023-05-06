@@ -27,7 +27,7 @@ import java.net.URI;
  *
  * <p>Created by hpacini on 03/15/19.
  */
-@SlingrEndpoint(name = "aws-lex")
+@SlingrEndpoint(name = "aws-lex", functionPrefix = "_")
 public class AwsLexEndpoint extends HttpEndpoint {
 
     private static final Logger logger = LoggerFactory.getLogger(AwsLexEndpoint.class);

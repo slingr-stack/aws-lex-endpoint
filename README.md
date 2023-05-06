@@ -604,8 +604,182 @@ For more information about how shortcuts or flow steps works, and how they are g
 
 Description of Custom Flow Steps
 
-*MANUALLY ADD THE DOCUMENTATION OF THESE FLOW STEPS HERE...*
+### Create Bot Version
 
+Creates a new version of the bot based on the $LATEST version. If the $LATEST version of this resource hasn't changed since you created the last version, Amazon Lex doesn't create a new version. It returns the last created version.
+
+<h3>Inputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Label</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Default</th>
+        <th>Visibility</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Bot Name</td>
+        <td>text</td>
+        <td>yes</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            The name of the bot. The name is case sensitive.
+        </td>
+    </tr>
+    <tr>
+        <td>Checksum</td>
+        <td>text</td>
+        <td>no</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            Identifies a specific revision of the $LATEST version of the bot. If you specify a checksum and the $LATEST version of the bot has a different checksum, a PreconditionFailedException exception is returned and Amazon Lex doesn't publish a new version. If you don't specify a checksum, Amazon Lex publishes the $LATEST version.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>Outputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>response</td>
+        <td>object</td>
+        <td>
+            Object resulting from the response to the endpoint call.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+### Delete Bot
+
+Deletes all versions of the bot, including the $LATEST version. To delete a specific version of the bot, use the DeleteBotVersion operation. The DeleteBot operation doesn't immediately remove the bot schema. Instead, it is marked for deletion and removed later.
+<h3>Inputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Label</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Default</th>
+        <th>Visibility</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Bot Name</td>
+        <td>text</td>
+        <td>yes</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            The name of the bot. The name is case sensitive.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>Outputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>response</td>
+        <td>object</td>
+        <td>
+            Object resulting from the response to the endpoint call.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+### Get Bot Version
+
+Returns metadata information for a specific bot. You must provide the bot name and the bot version or alias.
+
+<h3>Inputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Label</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Default</th>
+        <th>Visibility</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Bot Name</td>
+        <td>text</td>
+        <td>yes</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            The name of the bot. The name is case sensitive.
+        </td>
+    </tr>
+    <tr>
+        <td>Version or alias</td>
+        <td>text</td>
+        <td>yes</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            The version or alias of the bot.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>Outputs</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>response</td>
+        <td>object</td>
+        <td>
+            Object resulting from the response to the endpoint call.
+        </td>
+    </tr>
+    </tbody>
+</table>
 
 </details>
 

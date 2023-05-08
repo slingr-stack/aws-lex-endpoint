@@ -1,0 +1,26 @@
+{
+  "label": "Delete Bot",
+  "name": "deleteBotAwsLex",
+  "category": "integrations",
+  "description": "Deletes all versions of the bot, including the $LATEST version. To delete a specific version of the bot, use the DeleteBotVersion operation. The DeleteBot operation doesn't immediately remove the bot schema. Instead, it is marked for deletion and removed later.",
+  "inputs": [
+    {
+      "label": "Bot Name",
+      "name": "botName",
+      "description": "The name of the bot. The name is case sensitive.",
+      "type": "text",
+      "required": "true",
+      "options": {
+        "allowContextSelector": "true"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": "Response",
+      "name": "response",
+      "type": "object",
+      "description": "The response to external URL"
+    }
+  ]
+}

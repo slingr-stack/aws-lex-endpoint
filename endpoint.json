@@ -21,6 +21,26 @@
     "events": [],
     "functions": [
         {
+            "label": "GET",
+            "name": "_get"
+        },
+        {
+            "label": "POST",
+            "name": "_post"
+        },
+        {
+            "label": "PATCH",
+            "name": "_patch"
+        },
+        {
+            "label": "PUT",
+            "name": "_put"
+        },
+        {
+            "label": "DELETE",
+            "name": "_delete"
+        },
+        {
             "label": "HTTP GET",
             "name": "_httpGet"
         },
@@ -40,6 +60,12 @@
     "scripts":[
         "functions.js",
         "lex-helpers.js"
+    ],
+    "flowSteps":[
+        "apiCallAwsLex",
+        "createBotVersionAwsLex",
+        "deleteBotAwsLex",
+        "getBotVersionAwsLex"
     ],
     "configuration":[
         {

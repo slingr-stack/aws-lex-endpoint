@@ -1,0 +1,234 @@
+{
+  "fileName": "functions",
+  "endpointName": "awsLex",
+  "apiDescriptors": [
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/bots/:name/versions"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/intents/:name/versions"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/slottypes/:name/versions"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "url": "/bots/:name"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "url": "/bots/:botName/aliases/:name"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "url": "/bots/:botName/aliases/:aliasName/channels/:name"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "url": "/bots/:name/versions/:version"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "url": "/intents/:name"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "url": "/intents/:name/versions/:version"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "url": "/slottypes/:name"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "url": "/slottypes/:name/version/:version"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "url": "/bots/:botName/utterances/:userId"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/bots/:name/versions/:versionoralias"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/bots/:botName/aliases/:name"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/bots/:botName/aliases"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/bots/:botName/aliases/:aliasName/channels/:name"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/bots/:botName/aliases/:aliasName/channels"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/bots"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/bots/:name/versions"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/builtins/intents/:signature"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/builtins/intents"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/builtins/slottypes"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/exports"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/imports/:importId"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/intents/:name/versions/:version"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/intents"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/intents/:name/versions"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/slottypes/:name/versions/:version"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/slottypes"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/slottypes/:name/versions"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "url": "/bots/:botname/utterances"
+    },
+    {
+      "method": "PUT",
+      "prefix": "",
+      "suffix": "",
+      "url": "/bots/:name/versions/$LATEST"
+    },
+    {
+      "method": "PUT",
+      "prefix": "",
+      "suffix": "",
+      "url": "/bots/:botName/aliases/:name"
+    },
+    {
+      "method": "PUT",
+      "prefix": "",
+      "suffix": "",
+      "url": "/intents/:name/versions/$LATEST"
+    },
+    {
+      "method": "PUT",
+      "prefix": "",
+      "suffix": "",
+      "url": "/slottypes/:name/versions/$LATEST"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/imports"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/bot/:botName/alias/:botAlias/user/:userId/content"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/bot/:botName/alias/:botAlias/user/:userId/text"
+    }
+  ]
+}

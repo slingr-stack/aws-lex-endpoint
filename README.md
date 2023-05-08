@@ -120,16 +120,6 @@ endpoint.awsLex.StartImport(body);
 endpoint.awsLex.PostText(botName, botAlias, userId, body);
 ```
 
-## About SLINGR
-
-SLINGR is a low-code rapid application development platform that accelerates development, with robust architecture for integrations and executing custom workflows and automation.
-
-[More info about SLINGR](https://slingr.io)
-
-## License
-
-This endpoint is licensed under the Apache License 2.0. See the `LICENSE` file for more details.
-
 # Javascript API
 
 The Javascript API of the awsLex endpoint has three pieces:
@@ -785,3 +775,13 @@ Returns metadata information for a specific bot. You must provide the bot name a
 
 ## Additional Helpers
 *MANUALLY ADD THE DOCUMENTATION OF THESE HELPERS HERE...*
+
+## About SLINGR
+
+SLINGR is a low-code rapid application development platform that accelerates development, with robust architecture for integrations and executing custom workflows and automation.
+
+[More info about SLINGR](https://slingr.io)
+
+## License
+
+This endpoint is licensed under the Apache License 2.0. See the `LICENSE` file for more details.

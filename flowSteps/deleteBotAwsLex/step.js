@@ -1,11 +1,11 @@
 step.deleteBotAwsLex = function (inputs) {
 
 	var inputsLogic = {
-		name : inputs.name || ""
+		botName : inputs.botName || ""
 	};
 
 	var options = {
-		path: "/bots/"+inputsLogic.name,
+		path: "/bots/"+inputsLogic.botName,
 	}
 
 

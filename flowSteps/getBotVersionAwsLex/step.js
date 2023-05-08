@@ -1,12 +1,12 @@
 step.getBotVersionAwsLex = function (inputs) {
 
 	var inputsLogic = {
-		name : inputs.name || "",
+		botName : inputs.botName || "",
 		versionoralias: inputs.versionoralias || ""
 	};
 
 	var options = {
-		path: "/bots/"+inputsLogic.name+"/versions/"+inputsLogic.versionoralias,
+		path: "/bots/"+inputsLogic.botName+"/versions/"+inputsLogic.versionoralias,
 	}
 
 

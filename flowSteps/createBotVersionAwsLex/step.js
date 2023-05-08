@@ -2,11 +2,11 @@ step.createBotVersionAwsLex = function (inputs) {
 
 	var inputsLogic = {
 		checksum :  inputs.checksum || "",
-		name : inputs.name || ""
+		botName : inputs.botName || ""
 	};
 
 	var options = {
-		path: "/bots/"+inputsLogic.name+"/versions",
+		path: "/bots/"+inputsLogic.botName+"/versions",
 		body: {
 			checksum :  inputsLogic.checksum || ""
 		}

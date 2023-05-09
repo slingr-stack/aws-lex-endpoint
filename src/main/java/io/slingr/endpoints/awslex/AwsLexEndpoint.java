@@ -47,7 +47,7 @@ public class AwsLexEndpoint extends HttpEndpoint {
 
     @Override
     public String getApiUri() {
-        return null;
+        return "https://models." + SERVICE_NAME + "." + region + ".amazonaws.com";
     }
 
 
